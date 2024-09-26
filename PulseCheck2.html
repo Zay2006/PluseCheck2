@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
+      opacity: 0; /* Initial opacity for fade-in effect */
+      animation: fadeIn 2s forwards, zoomIn 5s infinite alternate; /* Apply animations */
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Fly-in effect from above */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* Stop flying in */
+      }
+    }
+
+    /* Keyframes for zoom-in effect */
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1); /* Start at normal size */
+      }
+      100% {
+        transform: scale(1.1); /* Zoom slightly */
+      }
+    }
+
+    /* Hover effect to add interaction */
+    img:hover {
+      transform: scale(1.2); /* Zoom when hovered */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+  </header>
+
+  <main>
+    <!-- First image with link -->
+    <figure>
+      <a href="image2.html">
+        <img src="https://shorturl.at/huvMb" alt="Image 1 Description">
+      </a>
+      <figcaption>Image 1 Caption</figcaption>
+    </figure>
+
+    <!-- Second image with link -->
+    <figure>
+      <a href="image3.html">
+        <img src="https://shorturl.at/H3HJ9" alt="Image 2 Description">
+      </a>
+      <figcaption>Image 2 Caption</figcaption>
+    </figure>
+
+    <!-- Third image with link back to the homepage -->
+    <figure>
+      <a href="index.html">
+        <img src="https://shorturl.at/OV7NA" alt="Image 3 Description">
+      </a>
+      <figcaption>Image 3 Caption</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <p>Follow us on:</p>
+    <ul>
+      <li><a href="https://www.instagram.com/wsp._.zay/">Instagram</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
